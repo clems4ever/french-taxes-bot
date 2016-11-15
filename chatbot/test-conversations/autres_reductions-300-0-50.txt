@@ -1,0 +1,18 @@
+Hello
+Bonjour je suis Alain Po, votre assistant financier personnel, et je peux vous aider à calculer l'impôt sur vos revenus de 2015. Pouvons-nous commencer la simulation ?
+oui
+Pour commencer, êtes-vous marié(e), pacsé(e) ou célibataire ?
+Marié
+Vous avez donc droit à 2 parts. Combien avez-vous d'enfants ?
+1
+Votre quotient familial est donc de 2.5. Quel est la somme de vos revenus imposables ?
+80000
+80000€ de revenus, compris! Avez-vous des réductions que vous voulez appliquer (crédit d'impôt, prime pour l'emploi, autres) ?
+oui
+Quel est le montant de votre crédit d'impôt?
+300
+Quel est le montant de votre prime pour l'emploi ?
+0
+Quel est le montant de vos autres réductions ?
+50
+Votre impôt est donc de 9588.60€.

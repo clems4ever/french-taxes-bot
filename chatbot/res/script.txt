@@ -1,0 +1,108 @@
+{
+@root
+    -Bonjour
+        #bonjour
+        *Bonjour je suis Alain Po votre assistant financier personnel, et je peux vous aider à calculer l'impôt sur vos revenus de 2015. Pouvons-nous commencer la simulation ?
+    -Bonjour je suis Alain Po, votre assistant financier personnel, et je peux vous aider à calculer l'impôt sur vos revenus de 2015. Pouvons-nous commencer la simulation ?
+@demarre
+    -oui
+        #demarre
+        *Je n'ai pas compris, voulez-vous démarrer la simulation ?
+    -Pour commencer, êtes-vous marié(e), pacsé(e) ou célibataire ?
+@marie_ou_pacse
+    -Je suis marié.
+        #marie_ou_pacse
+        *Je n'ai pas compris, êtes-vous marié(e), pacsé(e) ou célibataire ?
+    -Vous avez donc droit à _. Combien avez-vous d'enfants ?
+@demande_nb_enfants
+    -5
+        #reply_nb_enfants
+        *Pour que je puisse vous aider, il faut que vous me disiez combien d'enfants vous avez.
+    -Votre quotient familial est donc de _. Quel est la somme de vos revenus imposables ?
+@demande_revenue
+    -30000€
+        #reply_revenus
+        *Pour que je puisse calculer votre impôt, je dois connaître la somme de vos revenus imposables. Cette information est disponible sur vos feuilles de paie.
+    -_ de revenus, compris! Avez-vous des réductions que vous voulez appliquer (crédit d'impôt, prime pour l'emploi, autres) ?
+@autres_reductions
+    -oui
+        #no_action
+        *Je n'ai pas compris, avez-vous des réductions supplémentaires que vous voulez appliquer (crédit d'impôt, prime pour l'emploi, autres) ?
+    -Quel est le montant de votre crédit d'impôt?
+@demande_credit_impot
+    -1000€
+        #reply_credit_impot
+        *Quel est le montant de votre crédit d'impôt ?
+    -Quel est le montant de votre prime pour l'emploi ?
+@demande_prime_emploi
+    -100€
+        #reply_prime_emploi
+        *Quel est le montant de votre prime pour l'emploi ?
+    -Quel est le montant de vos autres réductions ?
+@demande_reductions
+    -10€
+        #reply_reductions
+        *Quel est le montant de vos autres réductions ?
+    -Votre impôt est donc de _€.
+@end
+}
+
+{
+@autres_reductions
+    -Non
+        #compute_impot
+    -Votre impôt est donc de _€.
+@end
+}
+
+{
+@demarre
+    -non
+        #demarre_pas
+    -N'hésitez pas à revenir vers moi lorsque vous voudrez effectuer votre prochaine simulation.
+@end
+}
+
+{
+@root
+    -oui
+        #demarre
+    -Pour commencer, êtes-vous marié(e), pacsé(e) ou célibataire ?
+@marie_ou_pacse
+}
+
+{
+@demande_revenue
+    -30000
+        #reply_revenus
+        *Pour que je puisse calculer votre impôt, je dois connaître la somme de vos revenus imposables. Cette information est disponible sur vos feuilles de paie.
+    -_ de revenus, compris! Avez-vous des réductions que vous voulez appliquer (crédit d'impôt, prime pour l'emploi, autres) ?
+@autres_reductions
+}
+
+{
+@demande_credit_impot
+    -1000
+        #reply_credit_impot
+        *Quel est le montant de votre crédit d'impôt ?
+    -Quel est le montant de votre prime pour l'emploi ?
+@demande_prime_emploi
+}
+
+{
+@demande_prime_emploi
+    -100
+        #reply_prime_emploi
+        *Quel est le montant de votre prime pour l'emploi ?
+    -Quel est le montant de vos autres réductions ?
+@demande_reductions
+}
+
+{
+@demande_reductions
+    -10
+        #reply_reductions
+        *Quel est le montant de vos autres réductions ?
+    -Votre impôt est donc de _€.
+@end
+}

@@ -1,0 +1,8 @@
+Hello
+Bonjour je suis Alain Po, votre assistant financier personnel, et je peux vous aider à calculer l'impôt sur vos revenus de 2015. Pouvons-nous commencer la simulation ?
+oui
+Pour commencer, êtes-vous marié(e), pacsé(e) ou célibataire ?
+yoyo
+Je n'ai pas compris, êtes-vous marié(e), pacsé(e) ou célibataire ?
+pacsé
+Vous avez donc droit à 2 parts. Combien avez-vous d'enfants ?

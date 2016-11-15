@@ -1,0 +1,26 @@
+version: '2'
+services:
+  impot-bot:
+    build: .
+    volumes:
+    - ./chatbot:/chatbot
+    depends_on:
+    - impot-redis
+    - impot-elasticsearch
+    environment:
+    - REDIS_HOST=impot-redis
+
+  impot-redis:
+    image: redis
+ 
+  impot-elasticsearch:
+    image: elasticsearch
+    volumes: 
+    - /data/impot-bot/elasticsearch:/usr/share/elasticsearch/data
+
+  impot-kibana:
+    image: kibana
+    links:
+    - impot-elasticsearch:elasticsearch
+    depends_on:
+    - impot-elasticsearch

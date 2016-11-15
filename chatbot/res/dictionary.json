@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "bonjour": {
+      "Bonjour": ["Hello", "Salut"]
+    },
+    "situation": {
+      "Marié": ["Mariée", "marie", "mariee"],
+      "Pacsé": ["Pacsée", "pacsee", "pacse"],
+      "Aucun": ["Rien", "autre"],
+      "Célibataire": ["Célib", "celib", "celibataire"]
+    },
+    "number": {
+      "regex": "[0-9]+"
+    },
+    "amount": {
+      "regex": "[0-9]+€"
+    },
+    "oui": {
+      "oui": ["ok", "yes"]
+    },
+    "non": {
+      "non": ["no"]
+    }
+  }
+}
